@@ -78,9 +78,8 @@ export async function POST(request: Request) {
       formData.append("member3Phone", members[1]?.phone || "")
       formData.append("problemTrack", problemTrack)
 
-      // You need to create a Google Apps Script web app and replace this URL
-      // Instructions are provided in the setup guide
-      const APPS_SCRIPT_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec"
+      const APPS_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbyqo3BvB9UZWXXhXeP82m4ycO7d6pRFumYOIrvEm9-x904cbBWBLkyMyzlvb3Ansbft/exec"
 
       const response = await fetch(APPS_SCRIPT_URL, {
         method: "POST",
